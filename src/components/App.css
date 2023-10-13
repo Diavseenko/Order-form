@@ -1,0 +1,29 @@
+/* app */
+
+.app-modal{
+   position: relative;
+   max-width: 940px;
+   max-height: 600px;
+   background-color: #fffffe;
+   border-radius: 10px;
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   display: flex;
+   margin: 0 auto;
+   vertical-align: middle;
+   padding: 12px 12px 12px 12px;
+}
+@media (max-width: 500px){
+   .app-modal{
+   height: 100%;
+   max-height: 100vh;
+   flex-direction: column;
+   padding: 0;
+   align-items: center;
+   background-color: #edf3fe;
+   }
+}

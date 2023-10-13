@@ -1,9 +1,9 @@
 import React from 'react';
 
+// import "./main.css"
+
 import Header from './header';
 import Body from './body';
-
-import "./main.css"
 
 export default function Main(props) {
    return (

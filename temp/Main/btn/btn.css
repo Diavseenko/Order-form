@@ -1,0 +1,73 @@
+/* buttons */
+.btn-panel{
+   width: 100%;
+   display: flex;
+   justify-content: flex-end;
+   padding: 17px;
+   padding: 0px 100px 20px 100px;
+}
+.btn{
+   width: 123px;
+   height: 48px;
+   background-color: #012a56;
+   border-radius: 5px;
+   color:#c6d9e6;
+   font-size: 16px;
+}
+
+.btn-panel-two{
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   padding: 0px 100px 20px 100px;
+}
+.confirm{
+   background-color: #483eff;
+}
+.btn-next-step:hover{
+   background-color: #174b89;
+}
+.btn-next-step--gray{
+   background-color: #d7d7d9;
+   color:azure
+}
+.btn-next-step--gray:hover{
+   background-color: #d7d7d9;
+   color:azure;
+   
+}
+.btn-go-back{
+   width: auto;
+   color:#91919b;
+   background-color: transparent;
+}
+.btn-go-back:hover{
+   color:#00173e;
+}
+@media (max-width: 870px){
+   .btn-panel, .btn-panel-two{
+      padding: 50px 50px 20px 50px;
+   }
+}
+@media (max-width: 770px){
+   .btn-panel, .btn-panel-two{
+      padding: 30px 30px 20px 30px;
+   }
+}
+@media (max-width: 660px){
+   .btn-panel, .btn-panel-two{
+   padding: 20px 20px 20px 20px;
+   }
+}
+@media (max-width: 500px){
+   .btn-panel, .btn-panel-two{
+      width: 100%;
+      padding: 17px 20px;
+      background-color: #fff;
+   }
+}
+@media (max-height:660px){
+   .btn-panel, .btn-panel-two{
+      padding: 10px 20px;
+      }
+}

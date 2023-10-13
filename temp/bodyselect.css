@@ -1,0 +1,174 @@
+/* select */
+.select{
+   width: 100%;
+   /* height: 75%; */
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+}
+.select-body{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.select-items{
+   width: 100%;
+   display: flex;
+   justify-content: space-around;
+   margin-bottom: 30px;
+}
+.select-item{
+   width: 30%;
+   display: flex;
+   justify-content: space-between;
+   border: 1px solid #91919b;
+   border-radius: 7px;
+   padding: 17px;
+   flex-direction: column;
+}
+
+.select-item:hover{
+   border: 2px solid #554ca7;
+}
+.select-item.active{
+   border: 2px solid #554ca7;
+   background-color: #f8f9fe;
+}
+.select-img{
+   width: 40px;
+   height: 40px;
+   display: block;
+   margin-bottom: 42px;
+}
+.select-name{
+   font-family: "Ubuntu-bold";
+   margin-bottom: 8px;
+}
+.select-price{
+   font-family: "Ubuntu-regular";
+   color:#91919b;
+   margin-bottom: 8px;
+}
+.select-free{
+   font-family: "Ubuntu-medium";
+   font-size: 12px;
+}
+@media (max-width: 770px){
+  .select-item{
+    padding: 7px;
+  }
+}
+@media (max-width: 700px){
+  .select-items {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 30px;
+  }
+  .select-item{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 8px;
+ }
+  .select-img{
+    margin-bottom: 0px;
+    margin-right: 15px;
+  }
+}
+
+   /* checkbox */
+
+   .select-choise{
+      width: 100%;
+      display: flex;
+      padding: 18px 0;
+      border-radius: 7px;
+      justify-content: center;
+      line-height: 1.5;
+      background-color: #f8f9fe;
+   }
+   .checkbox.style-e {
+      display: inline-block;
+      position: relative;
+      padding-left: 35px;
+      margin:  0 24px ;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    .checkbox.style-e input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+    .checkbox.style-e input:checked ~ .checkbox__checkmark {
+      background-color: #174b89;
+    }
+    .checkbox.style-e input:checked ~ .checkbox__checkmark:after {
+      left: 21px;
+    }
+    .checkbox.style-e:hover input ~ .checkbox__checkmark {
+      background-color: #174b89;
+    }
+    .checkbox.style-e:hover input:checked ~ .checkbox__checkmark {
+      background-color: #174b89;
+    }
+    .checkbox.style-e .checkbox__checkmark {
+      position: absolute;
+      top: 1px;
+      left: 0;
+      height: 22px;
+      width: 40px;
+      background-color: #012a56;
+      transition: background-color 0.25s ease;
+      border-radius: 11px;
+    }
+    .checkbox.style-e .checkbox__checkmark:after {
+      content: "";
+      position: absolute;
+      left: 3px;
+      top: 3px;
+      width: 16px;
+      height: 16px;
+      display: block;
+      background-color: #fff;
+      border-radius: 50%;
+      transition: left 0.25s ease;
+    }
+    .checkbox.style-e .checkbox__body {
+      color: #333;
+      line-height: 1.4;
+      font-size: 16px;
+      transition: color 0.25s ease;
+    }
+    .checkbox__month{
+      font-family: "Ubuntu-medium";
+      
+    }
+    .checkbox__year--gray{
+      font-family: "Ubuntu-medium";
+      color:#91919b;
+    }
+    .checkbox__month--gray{
+      font-family: "Ubuntu-medium";
+      color:#91919b;
+    }
+    .checkbox__year{
+      font-family: "Ubuntu-medium";
+    }
+    @media (max-height:660px){
+      .select-items{
+        margin-bottom: 10px;
+      }
+   }
+   

@@ -1,0 +1,25 @@
+/* finish */
+.finishmess{
+   width: 100%;
+   height: 75%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.finishmess-img{
+   margin-bottom: 30px;
+}
+.finishmess-title{
+   font-family: "Ubuntu-Bold";
+   color: #062856;
+   font-size: 30px;
+   margin-bottom: 20px;
+}
+.finishmess-text{
+   font-family: "Ubuntu-Medium";
+   font-size: 15px;
+   text-align: center;
+   line-height: 1.3;
+   color:#9d9da5;
+}

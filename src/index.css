@@ -1,0 +1,39 @@
+/* index */
+@font-face {
+   font-family: "Ubuntu-bold";
+   src: url("/public/fonts/Ubuntu-Bold.ttf");
+}
+@font-face {
+   font-family: "Ubuntu-medium";
+   src: url("/public/fonts/Ubuntu-Medium.ttf");
+}
+@font-face {
+   font-family: "Ubuntu-regular";
+   src: url("/public/fonts/Ubuntu-Regular.ttf");
+}
+
+*{
+	box-sizing: border-box;
+   -moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+   padding: 0;
+	margin: 0;
+	border: 0;
+}
+input:focus{
+   border:none;
+   outline: none;
+}
+body{
+   background-color: #eef5ff;
+   font-family: "Ubuntu-medium";
+   font-size: 14px;
+}
+
+.container{
+   max-width: 1200px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
+} 
