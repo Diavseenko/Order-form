@@ -1,4 +1,5 @@
 import React from 'react';
+import uuid from "react-uuid";
 
 import BodyPerson from '../person/bodyperson';
 import BodySelect from '../select/bodyselect';
@@ -15,6 +16,7 @@ export default function Body(props) {
       case 0:
          return (
             <BodyPerson
+               key={uuid()}
                valid={props.valid}
                setValid={props.setValid}
                saveValid={props.saveValid}
@@ -40,7 +42,7 @@ export default function Body(props) {
                                     selects={props.selects}
                                     setSelect={props.setSelect}
                                     id={sel.id}
-                                    key={sel.id}
+                                    key={uuid()}
                                     src={sel.src}
                                     select={sel.select}
                                     selected={sel.selected}
@@ -53,7 +55,7 @@ export default function Body(props) {
                               <BodySelect
                                  selects={props.selects}
                                  setSelect={props.setSelect}
-                                 key={sel.id}
+                                 key={uuid()}
                                  id={sel.id}
                                  src={sel.src}
                                  select={sel.select}
@@ -66,6 +68,7 @@ export default function Body(props) {
                      }
                   </div>
                   <InterChoise
+                     key={uuid()}
                      yearly={props.yearly}
                      steps={props.steps}
                      setStep={props.setStep}
@@ -82,7 +85,7 @@ export default function Body(props) {
                         if (props.yearly) {
                            return (
                               <BodyAddons
-                                 key={add.id}
+                                 key={uuid()}
                                  id={add.id}
                                  addons={props.addons}
                                  setAddons={props.setAddons}
@@ -95,7 +98,7 @@ export default function Body(props) {
                            )
                         } return (
                            <BodyAddons
-                              key={add.id}
+                              key={uuid()}
                               id={add.id}
                               addons={props.addons}
                               setAddons={props.setAddons}
@@ -115,6 +118,7 @@ export default function Body(props) {
          return (
             <div className="finish">
                < BodyFinish
+                  key={uuid()}
                   selects={props.selects}
                   addons={props.addons}
                   steps={props.steps}
@@ -127,7 +131,9 @@ export default function Body(props) {
          )
       case 4:
          return (
-            <Finishmess />
+            <Finishmess
+               key={uuid()}
+            />
          )
 
    }

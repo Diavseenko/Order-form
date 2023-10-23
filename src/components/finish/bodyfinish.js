@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import uuid from "react-uuid";
 
 import "./bodyfinish.css";
 
@@ -7,12 +8,9 @@ import Finishbody from './finishbody';
 import Finishres from './finishres';
 
 export default function BodyFinish(props) {
-   console.log(props)
    let total = 0;
-
    return (
       <div className="finish-wrap">
-
          <div className="finish-items">
             {props.yearly ?
                props.selects.map((sel) => {
@@ -20,6 +18,7 @@ export default function BodyFinish(props) {
                      total += Number(sel.price)
                      return (
                         <Finishheader
+                           key={uuid()}
                            period={"Monthly"}
                            select={sel.select}
                            setStep={props.setStep}
@@ -38,6 +37,7 @@ export default function BodyFinish(props) {
                      total += Number(sel.pricem)
                      return (
                         <Finishheader
+                           key={uuid()}
                            period={"Monthly"}
                            select={sel.select}
                            setStep={props.setStep}
@@ -59,6 +59,7 @@ export default function BodyFinish(props) {
                      total += Number(add.addprice)
                      return (
                         <Finishbody
+                           key={uuid()}
                            nameadd={add.nameadd}
                            addprice={add.addprice}
                            per={add.yr}
@@ -71,6 +72,7 @@ export default function BodyFinish(props) {
                      total += Number(add.addpricem)
                      return (
                         <Finishbody
+                           key={uuid()}
                            nameadd={add.nameadd}
                            addprice={add.addpricem}
                            per={add.mon}
@@ -82,6 +84,7 @@ export default function BodyFinish(props) {
          </div>
 
          <Finishres
+            key={uuid()}
             price={total}
             period={props.yearly ? "per year" : "per month"}
             per={props.yearly ? "/yr" : "/mon"}

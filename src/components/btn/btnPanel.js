@@ -12,6 +12,17 @@ export default function BtnPanel(props) {
          })
       )
    };
+   const savePerson = () => {
+      const name = document.getElementById('name');
+      const email = document.getElementById('email');
+      const phone = document.getElementById('phone');
+      props.setPerson({
+         ...props.person,
+         name: name.value,
+         email: email.value,
+         phone: phone.value
+      });
+   };
 
    const confirm = () => {
       const result = {};
@@ -29,7 +40,7 @@ export default function BtnPanel(props) {
          } return add
       });
       moveBySteps(1);
-      props.saveValid(true, " ", " ", " ")
+      // props.saveValid(true, " ", " ", " ")
       alert(JSON.stringify(result));
    };
 
@@ -38,7 +49,7 @@ export default function BtnPanel(props) {
          <div className="btn-panel">
             <button className={props.valid ? 'btn btn-next-step' : "btn btn-next-step btn-next-step--gray"}
                disabled={!props.valid}
-               onClick={(e) => { moveBySteps(1) }}>
+               onClick={(e) => { savePerson(); moveBySteps(1) }}>
                {props.valid ? "Next Step" : "Fill form"}
             </button>
          </div>

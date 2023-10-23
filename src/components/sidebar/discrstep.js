@@ -1,4 +1,5 @@
 import React from 'react';
+import uuid from 'react-uuid';
 
 import MapsDrop from './mapsDrop';
 
@@ -6,6 +7,7 @@ export default function DiscrStep(props) {
    return (
       <div className="sidebar-item">
          <MapsDrop
+            key={uuid()}
             steps={props.steps}
             setStep={props.setStep}
             number={props.number}

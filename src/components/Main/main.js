@@ -1,4 +1,5 @@
 import React from 'react';
+import uuid from "react-uuid";
 
 import Header from './header';
 import Body from './body';
@@ -9,14 +10,16 @@ export default function Main(props) {
    return (
       <div className="modal-main">
          {props.steps.map((step) => {
-            if (step.active === true) {
+            if (step.active) {
                return (
-                  <>
-                     <Header
+                  <React.Fragment key={uuid()}>
+                     < Header
+                        key={uuid()}
                         title={props.steps[step.number - 1].title}
                         thatDo={props.steps[step.number - 1].thatDo}
                      />
                      <Body
+                        key={uuid()}
                         valid={props.valid}
                         setValid={props.setValid}
                         saveValid={props.saveValid}
@@ -33,10 +36,10 @@ export default function Main(props) {
                         person={props.person}
                         setPerson={props.setPerson}
                      />
-                  </>
+                  </React.Fragment>
                )
-            }
+            } return undefined;
          })}
-      </div>
+      </div >
    )
 };
