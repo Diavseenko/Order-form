@@ -14,6 +14,10 @@
    flex-direction: column;
    justify-content:stretch;
 }
+.person::placeholder{
+   color:#dbdbe3;
+}
+
 .label{
    display: flex;
    font-family: "Ubuntu-regular";

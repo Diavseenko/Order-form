@@ -14,7 +14,6 @@ export default function Main(props) {
                return (
                   <React.Fragment key={uuid()}>
                      < Header
-                        key={uuid()}
                         title={props.steps[step.number - 1].title}
                         thatDo={props.steps[step.number - 1].thatDo}
                      />

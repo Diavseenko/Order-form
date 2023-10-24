@@ -1,4 +1,5 @@
 import React from 'react';
+import uuid from 'react-uuid';
 
 import DiscrStep from './discrstep';
 
@@ -6,7 +7,7 @@ import "./sidebar.css";
 
 export default function SideBar(props) {
    return (
-      <div className='side-bar'>
+      <div className='side-bar' key={uuid()}>
          <div className="sidebar-items">
             {props.steps.map((step) => {
                if (step.number < 5) {

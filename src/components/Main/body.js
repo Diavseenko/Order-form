@@ -8,8 +8,6 @@ import BodyAddons from '../addons/bodyaddons';
 import BodyFinish from '../finish/bodyfinish';
 import Finishmess from '../thank/finishmess';
 
-// import "./bodyselect.css";
-
 export default function Body(props) {
 
    switch (props.step) {

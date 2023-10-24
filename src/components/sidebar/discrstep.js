@@ -5,7 +5,7 @@ import MapsDrop from './mapsDrop';
 
 export default function DiscrStep(props) {
    return (
-      <div className="sidebar-item">
+      <div className="sidebar-item" key={uuid()}>
          <MapsDrop
             key={uuid()}
             steps={props.steps}

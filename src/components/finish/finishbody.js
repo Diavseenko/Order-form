@@ -11,4 +11,4 @@ function Finishbody(props) {
    )
 }
 
-export default Finishbody
+export default Finishbody;

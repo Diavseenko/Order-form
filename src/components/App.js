@@ -1,24 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import uuid from "react-uuid";
 
 import SideBar from './sidebar/sidebar';
 import Main from './main/main';
-// import BtnPanel from './btn/btnPanel';
-import Btnperson from "./btn/btnperson";
+import BtnPerson from "./btn/btnperson";
 import Btnconfirm from "./btn/btnconfirm";
 import "./App.css";
 import "./btn/btn.css";
 
 export default function App() {
-   // useEffect(() => {
-   //    if (valid) {
-   //       props.setValid(false)
-   //       console.log("valid")
-   //    }
-   // });
 
-   let [valid, setValid] = useState(false);
-   console.log(valid);
+   let [valid, setValid] = useState(+false);
+
    const [person, setPerson] = useState({
       name: "",
       email: "",
@@ -83,36 +76,20 @@ export default function App() {
             result["addon" + ind] = add.nameadd
          } return add
       });
-      moveBySteps(1);
-      // props.saveValid(true, " ", " ", " ")
+
       alert(JSON.stringify(result));
+      setTimeout(() => { window.location.reload() }, 5000);
    };
-
-
-   // const saveValid = (bool, name, email, phone) => {
-   //    if (bool) {
-   //       setPerson({
-   //          ...person,
-   //          name: name,
-   //          email: email,
-   //          phone: phone,
-   //       });
-   //    } setPerson({
-   //       ...person,
-   //    })
-   // };
 
    return (
       <div className="container" key={uuid()}>
-         <div className='app-modal' key={uuid()}   >
+         <div className='app-modal'>
             <SideBar
-               key={uuid()}
                steps={steps}
                setStep={setStep}
             />
             <div className="main-wrap">
                <Main
-                  key={uuid()}
                   valid={valid}
                   setValid={setValid}
                   steps={steps}
@@ -129,7 +106,7 @@ export default function App() {
                   if (step.active && step.id > 0 && step.id < 5) {
                      if (step.number === 1) {
                         return (
-                           <Btnperson
+                           <BtnPerson
                               key={uuid()}
                               selects={selects}
                               savePerson={savePerson}
@@ -160,7 +137,7 @@ export default function App() {
                            />
                         )
                      } return (
-                        <div className="btn-panel-two">
+                        <div className="btn-panel-two" key={uuid()}>
                            <button className='btn btn-go-back' onClick={() => moveBySteps(-1, step.number)}>go Back</button>
                            <button className='btn btn-next-step' onClick={() => moveBySteps(1, step.number)}>Next Step</button>
                         </div>
@@ -172,27 +149,3 @@ export default function App() {
       </div>
    )
 };
-
-// {steps.map((step) => {
-//    if (step.active && step.id > 0 && step.id < 5) {
-//       return (
-//          <BtnPanel
-//             key={uuid()}
-//             selects={selects}
-//             addons={addons}
-//             valid={valid}
-//             steps={steps}
-//             setStep={setStep}
-//             // saveValid={saveValid}
-//             person={person}
-//             setPerson={setPerson}
-//             number={step.number}
-//          />
-//       )
-//    }
-// })}
-// </div>
-// </div>
-// </div>
-// )
-// }
